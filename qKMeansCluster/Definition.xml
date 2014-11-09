@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExtensionObject Label="K Means Cluster" Description="K Means Cluster Table" Type="object">
+
+  <Initiate Name="Chart.Text.0.Content" Value="//public.opencpu.org/ocpu/github/samuelpena/qKMeansCluster/R" />
+  <Initiate Name="Chart.Text.1.Content" Value="4" />
+
+  <Text Label="Web Service" Type="text" TargetName="Web Service" Width="400"/>
+  <Text Label="Cluster Parameter" Type="text" TargetName="ClusterParameter" />
+  <Text Expression="0" Type="checkbox" Width="50" />
+
+  <Dimension Label="Dimensions" DropTarget="Dimensions" Require="true" Multiple="true"  />
+  <Measurement Multiple="true" />
+
+  <Initiate Name="Caption.Text" Value="K Means Cluster" />
+  <Initiate Name="Caption.Font.Italic" Value="1" />
+
+  <Initiate Name="Chart.BgColor.ColorHex" Value="#FFFFE0" />
+  <PropertiesPage Version="11" File="Properties.qvpp" />
+</ExtensionObject>

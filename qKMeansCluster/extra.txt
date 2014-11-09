@@ -1,0 +1,23 @@
+if (!Qva.Public.Wrapper.prototype.getData) {
+  Qva.Public.Wrapper.prototype.getData = function() {
+ 
+ 
+  var data = {},
+  header = this.Data.HeaderRows[0];
+ 
+ 
+  data.Rows = this.Data.Rows;
+  data.Column = Object.keys(data.Rows[0]).map(function(c) {
+       return data.Rows.map(function(r) {
+            return r[c];
+       });
+  });
+ 
+ 
+  data.Column.forEach(function(element, index) {
+       element.type = element[0].color === undefined ? "expression" : "dimension";
+       element.label = header[index].text;
+  });
+       return data;
+  };
+}
